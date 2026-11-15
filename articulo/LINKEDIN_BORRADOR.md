@@ -16,7 +16,7 @@ El proyecto del equipo, AstroTrack, es un visor web (con versiones de escritorio
 
 Somos el equipo **Transientes**, de Santiago de Chile: Juan Pablo Castillo, Bryan Cabezas, Antonia Del Castillo, Mauricio Valenzuela, María Javiera Valenzuela y yo. [Pide permiso a cada persona antes de publicar sus nombres.]
 
-Yo no fui quien construyó el núcleo del visor. Mi aporte fue otro, y creo que igual de útil en una competencia con poco tiempo: **revisar si lo que el proyecto decía que hacía coincidía con lo que hacía**.
+Mi rol fue el de **acceso a datos**: la capa que consulta el archivo de la NASA (protocolo SIA2), lee solo la parte necesaria de cada archivo con peticiones HTTP por rangos, guarda en caché y precalcula los campos de la demo para que funcione aunque el archivo no responda. Después me ocupé del empaquetado (app instalable, instaladores de escritorio y Android) y de algo igual de útil en una competencia con poco tiempo: **revisar si lo que el proyecto decía que hacía coincidía con lo que hacía**. El visor y la ciencia de los espectros son trabajo de otras personas del equipo.
 
 ## 1. Auditar el desvío entre documentación y código
 
