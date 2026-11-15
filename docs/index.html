@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AstroTRACK · Descargas oficiales</title>
+<title>AstroTrack · Descargas oficiales</title>
 <style>
 :root{--bg:#fff;--fg:#14181f;--mut:#566;--card:#f3f5f9;--ac:#0b57d0;--warn:#8a5a00}
 @media (prefers-color-scheme:dark){:root{--bg:#0e1118;--fg:#e8ecf3;--mut:#9aa6b8;--card:#181d28;--ac:#8ab4ff;--warn:#f0c060}}
@@ -12,7 +12,7 @@ li{background:var(--card);border-radius:10px;padding:12px 14px}
 a{color:var(--ac)}code{font-size:.85em;word-break:break-all}
 .warn{color:var(--warn)}
 </style></head><body><main>
-<h1>AstroTRACK · SPHEREx</h1>
+<h1>AstroTrack · SPHEREx</h1>
 <p class="mut">Descargas oficiales · NASA Space Apps 2026</p>
 <p class="mut" id="ver" role="status">Buscando la última versión…</p>
 <ul id="lista"><li><a href="https://github.com/vladimiracunadev-create/spherex-releases/releases/latest">Ver la última versión en GitHub</a></li></ul>
@@ -23,7 +23,7 @@ a{color:var(--ac)}code{font-size:.85em;word-break:break-all}
  const R="vladimiracunadev-create/spherex-releases",ver=document.getElementById("ver"),ul=document.getElementById("lista");
  try{
   const r=await fetch("https://api.github.com/repos/"+R+"/releases/latest");if(!r.ok)throw 0;
-  const j=await r.json(),A=j.assets,f=re=>A.find(a=>re.test(a.name)),mb=b=>(b/1048576).toFixed(b>=1e7?0:1)+" MB";
+  const j=await r.json(),A=j.assets,f=re=>A.find(a=>re.test(a.name)),mb=b=>b<1048576?Math.max(1,Math.round(b/1024))+" KB":(b/1048576).toFixed(b>=1e7?0:1)+" MB";
   const L=(a,t)=>a?'<a href="'+a.browser_download_url+'">'+t+" ("+mb(a.size)+")</a>":"";
   const filas=[["Windows",[[/setup\.exe$/,"instalador .exe"],[/\.msi$/,".msi"]]],["macOS",[[/\.dmg$/,".dmg (universal)"]]],["Linux",[[/\.AppImage$/,".AppImage"],[/\.deb$/,".deb"]]],["Android",[[/\.apk$/,".apk"]]],["Web (zip estático)",[[/pwa.*\.zip$/,".zip"]]],["Verificación",[[/^SHA256SUMS/,"SHA256SUMS.txt"]]]];
   ul.innerHTML=filas.map(([n,xs])=>"<li><b>"+n+"</b> · "+xs.map(([re,t])=>L(f(re),t)).filter(Boolean).join(" · ")+"</li>").join("");
