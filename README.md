@@ -11,6 +11,10 @@ No contiene código fuente: solo la página de enlaces y los releases.
 
 Los instaladores no están firmados y no se probaron en equipos reales. Publicado el 2026-11-15.
 
+## Documentación
+
+Estudio en profundidad del proyecto en [`documentacion/`](documentacion/README.md): [el proyecto](documentacion/01_PROYECTO.md), [arquitectura](documentacion/02_ARQUITECTURA.md), [API](documentacion/03_API.md), [datos de SPHEREx](documentacion/04_DATOS_SPHEREX.md), [backend](documentacion/05_BACKEND.md), [visor](documentacion/06_FRONTEND.md), [apps y releases](documentacion/07_APPS_NATIVAS_Y_RELEASES.md), [hallazgos científicos](documentacion/08_HALLAZGOS_CIENTIFICOS.md), [riesgos y auditoría](documentacion/09_RIESGOS_Y_AUDITORIA.md), [herramientas y uso de IA](documentacion/10_HERRAMIENTAS_Y_IA.md), [glosario](documentacion/11_GLOSARIO.md), [instalar y verificar descargas](documentacion/12_VERIFICAR_DESCARGAS.md) y [cronología](documentacion/13_CRONOLOGIA.md). Además, el [CHANGELOG](CHANGELOG.md).
+
 ## Tecnologías y fuentes de datos
 
 **Lenguajes:** Python 3.11 (backend y análisis), TypeScript y React 18 (visor web), Rust (envoltorio de escritorio con Tauri 2), JavaScript/Node (scripts de empaquetado), Bash y YAML (CI/CD), HTML/CSS.
