@@ -1,6 +1,6 @@
 # spherex-releases
 
-Copia pública de los instaladores de **AstroTrack · SPHEREx** (NASA Space Apps 2026, desafío *Planet X and SPHEREx*).
+Copia pública de los instaladores de **AstroTrack · SPHEREx** ([NASA Space Apps Challenge](https://www.spaceappschallenge.org/) 2026, desafío *Planet X and SPHEREx*).
 No contiene código fuente: solo la página de enlaces y los releases.
 
 - Aplicación web (en línea): https://spherex-planet-x-tau.vercel.app/
