@@ -69,4 +69,4 @@ Seis personas, con roles que separan el trabajo desde la primera hora: **D1** ac
 
 ## 📚 Documentos siguientes
 
-[02 Arquitectura](02_ARQUITECTURA.md) · [03 API](03_API.md) · [04 Datos de SPHEREx](04_DATOS_SPHEREX.md) · [05 Backend](05_BACKEND.md) · [06 Frontend](06_FRONTEND.md)
+[21 Tipos de usuario](21_TIPOS_DE_USUARIO.md) · [22 Mapa de funciones](22_MAPA_DE_FUNCIONES.md) · [02 Arquitectura](02_ARQUITECTURA.md) · [03 API](03_API.md) · [04 Datos de SPHEREx](04_DATOS_SPHEREX.md) · [05 Backend](05_BACKEND.md) · [06 Frontend](06_FRONTEND.md)

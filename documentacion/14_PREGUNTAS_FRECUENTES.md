@@ -15,6 +15,12 @@ Escribes una posición del cielo (ascensión recta y declinación, en grados o s
 </details>
 
 <details>
+<summary><b>¿Para quién es cada parte de la herramienta?</b></summary>
+
+La portada y la vista simple son para quien no sabe astronomía; el Modo Misión, para aprender o enseñar; el Modo ciencia (Explorador, Prisma, catálogos), para quien quiere profundizar; la URL, la API y las descargas, para quien integra o instala. Hay siete tipos de usuario identificados (hipótesis, sin pruebas con personas). → [21 Tipos de usuario](21_TIPOS_DE_USUARIO.md), [22 Mapa de funciones](22_MAPA_DE_FUNCIONES.md)
+</details>
+
+<details>
 <summary><b>¿Necesito saber astronomía?</b></summary>
 
 No: la vista simple muestra una imagen grande con el objeto marcado y las fechas; el «Modo ciencia» abre las herramientas completas. Hay un tutorial guiado por la mascota Spherix, un Modo Misión con cinco niveles y un glosario que aparece al pasar el mouse. → [11 Glosario](11_GLOSARIO.md)
