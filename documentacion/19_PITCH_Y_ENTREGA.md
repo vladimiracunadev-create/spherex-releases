@@ -51,6 +51,7 @@ El equipo preparó un guion principal y uno alternativo, con demo de 30 segundos
 | ¿Por qué no usaron aprendizaje automático? | El desafío pide un visor para personas y el cuello de botella real es traer y alinear los datos, no reconocer el movimiento. La IA aportaría en el cribado de candidatos (modelo: ALeRCE), planteado como paso siguiente |
 | ¿Qué pasa si pongo una coordenada sin datos? | Se muestra un estado vacío que dice cuántas épocas hay y sugiere un campo cercano |
 | ¿Esto escala a todo el cielo? | La consulta es por posición, así que sí en cobertura. Lo que no escala sin infraestructura es la caché: habría que precomputar recortes, como hace unWISE para WiseView |
+| ¿Otro equipo hizo lo mismo? | Es probable: el desafío lo pide y partimos del mismo modelo (WiseView). Sumamos el eje espectral de 102 bandas y un estudio de datos que explica por qué la configuración por defecto no muestra el movimiento. No vi el otro proyecto, así que no digo que seamos únicos ([20](20_ORIGINALIDAD_Y_DIFERENCIADORES.md)) |
 | ¿Qué tan correctos son los espectros? | Indicativos: fotometría de apertura con la luz zodiacal restada, y se dice en la interfaz. Para ciencia, la herramienta de IRSA. **Nunca decir que son de calidad científica** |
 
 Más respuestas en [14 Preguntas y respuestas](14_PREGUNTAS_FRECUENTES.md).

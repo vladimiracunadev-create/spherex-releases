@@ -30,7 +30,7 @@ Una herramienta web pública, gratuita y sin cuentas, que convierte el archivo d
 
 ## 🧭 Propuesta de valor frente a lo que existe
 
-El estado del arte del propio equipo identifica un hueco: no hay una herramienta pública para SPHEREx que muestre **dos ejes a la vez**, cómo cambia una zona **en el tiempo** y cómo se ve **en cada longitud de onda**. Esa afirmación es del equipo y está limitada por lo que buscaron; si alguien encuentra lo contrario, se corrige. Ver [16 Comparativa](16_COMPARATIVA_Y_ESTADO_DEL_ARTE.md).
+El estado del arte del propio equipo identifica un hueco: no hay una herramienta pública para SPHEREx que muestre **dos ejes a la vez**, cómo cambia una zona **en el tiempo** y cómo se ve **en cada longitud de onda**. Esa afirmación es del equipo y está limitada por lo que buscaron; si alguien encuentra lo contrario, se corrige. Ver [16 Comparativa](16_COMPARATIVA_Y_ESTADO_DEL_ARTE.md) y, para el caso de que otro equipo haya hecho algo parecido, [20 Originalidad y diferenciadores](20_ORIGINALIDAD_Y_DIFERENCIADORES.md).
 
 ## 💰 Costos y dependencias
 

@@ -31,6 +31,7 @@ Leí la documentación del repositorio oficial (`docs/`, `README.md`, `AGENTS.md
 | 🛣️ 17 | [Hoja de ruta](17_HOJA_DE_RUTA.md) | Coordinación | ¿Qué conviene hacer, y en qué orden? |
 | 🔐 18 | [Seguridad y privacidad](18_SEGURIDAD_Y_PRIVACIDAD.md) | Desarrollo y usuarios | ¿Qué datos maneja y qué riesgos hay? |
 | 🎤 19 | [El pitch y la entrega](19_PITCH_Y_ENTREGA.md) | Evaluación y equipos futuros | ¿Cómo se presentó y se entregó? |
+| 🧬 20 | [Originalidad y diferenciadores](20_ORIGINALIDAD_Y_DIFERENCIADORES.md) | Evaluación y equipos futuros | ¿Y si otro equipo hizo lo mismo? ¿Qué es propio? |
 
 ## 🧭 Rutas de lectura
 
@@ -41,6 +42,7 @@ Leí la documentación del repositorio oficial (`docs/`, `README.md`, `AGENTS.md
 - **Me interesa la ciencia:** [04](04_DATOS_SPHEREX.md) y [08](08_HALLAZGOS_CIENTIFICOS.md).
 - **Evalúo el proyecto (jurado, institución, posible uso comercial):** [01](01_PROYECTO.md), [14](14_PREGUNTAS_FRECUENTES.md), [15](15_ALCANCE_COMERCIAL.md), [16](16_COMPARATIVA_Y_ESTADO_DEL_ARTE.md) y [19](19_PITCH_Y_ENTREGA.md).
 - **Me preocupa la seguridad o la privacidad:** [18](18_SEGURIDAD_Y_PRIVACIDAD.md) y [SECURITY.md](../SECURITY.md).
+- **Me preguntan si es original o si otro equipo hizo lo mismo:** [20](20_ORIGINALIDAD_Y_DIFERENCIADORES.md), [16](16_COMPARATIVA_Y_ESTADO_DEL_ARTE.md) y [19](19_PITCH_Y_ENTREGA.md).
 - **Quiero saber qué sigue:** [17](17_HOJA_DE_RUTA.md) y [09](09_RIESGOS_Y_AUDITORIA.md).
 
 ## 🔗 Enlaces útiles

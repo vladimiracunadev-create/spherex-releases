@@ -175,6 +175,12 @@ No lo sé y esta documentación no afirma ningún resultado. El jurado evalúa i
 </details>
 
 <details>
+<summary><b>¿Y si otro equipo hizo lo mismo?</b></summary>
+
+Es probable: el desafío pide exactamente esto y todos parten del mismo modelo, WiseView. Lo básico (coordenadas, parpadeo, resta, URL) lo tendrán muchos; lo que aquí va más allá es el eje espectral de 102 bandas, un estudio de datos reproducible y la distribución real con instaladores. No comparé con otros equipos, así que no afirmo que sea único. → [20 Originalidad y diferenciadores](20_ORIGINALIDAD_Y_DIFERENCIADORES.md)
+</details>
+
+<details>
 <summary><b>¿Con qué licencia se publica?</b></summary>
 
 El repositorio oficial incluye una licencia **MIT** a nombre del equipo. Este repositorio (descargas y documentación) todavía no tiene licencia propia. Los datos de SPHEREx son de la NASA y exigen la atribución literal que aparece en [04](04_DATOS_SPHEREX.md). → [15 Alcance comercial](15_ALCANCE_COMERCIAL.md)

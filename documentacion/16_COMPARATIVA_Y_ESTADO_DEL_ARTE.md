@@ -27,6 +27,9 @@ Plutón se descubrió comparando dos placas fotográficas tomadas en fechas dist
 
 Es, a la vez, la lectura literal del enunciado y las dos viñetas más exigentes de las consideraciones del desafío (las 102 bandas y los espectros al vuelo). El estado del arte del equipo no encontró una herramienta pública que haga eso para SPHEREx.
 
+> [!NOTE]
+> Esa búsqueda no incluye a otros equipos del mismo hackatón. Para tratar ese caso, ver [20 Originalidad y diferenciadores](20_ORIGINALIDAD_Y_DIFERENCIADORES.md).
+
 ## 🧩 Lecciones que el equipo copió de WiseView
 
 - **Una caja de coordenadas y nada más** en la primera pantalla.
