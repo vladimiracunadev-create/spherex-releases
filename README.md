@@ -11,6 +11,27 @@ No contiene código fuente: solo la página de enlaces y los releases.
 
 Los instaladores no están firmados y no se probaron en equipos reales. Publicado el 2026-11-15.
 
+## Tecnologías y fuentes de datos
+
+**Lenguajes:** Python 3.11 (backend y análisis), TypeScript y React 18 (visor web), Rust (envoltorio de escritorio con Tauri 2), JavaScript/Node (scripts de empaquetado), Bash y YAML (CI/CD), HTML/CSS.
+
+**Backend y datos:** FastAPI, `pyvo` (consultas SIA2), `astropy` (FITS, WCS, estiramiento de imagen), `numpy`/`scipy`, `pytest` y `ruff`. Caché en disco y respuestas precalculadas para no depender de la red durante la demo.
+
+**Visor:** React + Vite, Aladin Lite 3.8.2 para el cielo, y un explorador propio de imágenes por fecha y banda.
+
+**Apps instalables:** Tauri 2 (Windows, macOS, Linux), Capacitor 6 (APK de Android) y PWA instalable (iPhone/iPad, que no admiten `.ipa` sin cuenta de pago).
+
+**Despliegue y entrega:** Vercel (web `spherex-planet-x`, API `spherex-api` y prototipo, con *rewrites* del mismo dominio para evitar CORS), GitHub Actions (release automático al empujar una etiqueta `vX.Y.Z`), GitHub Releases, GitHub Pages (esta página) y sumas SHA-256 para verificar las descargas.
+
+**Fuentes de datos**
+- [NASA/IPAC IRSA](https://irsa.ipac.caltech.edu/): imágenes de nivel 2 de SPHEREx (colecciones `spherex_dr1` y `spherex_qr3`, servicio SIA2) y cubo HiPS del cielo.
+- [SIMBAD](https://simbad.cds.unistra.fr/) (CDS, con espejo de Harvard de respaldo) y Gaia para nombres y catálogos de objetos.
+- Misión [SPHEREx](https://spherex.caltech.edu/) de la NASA (JPL y Caltech): *This publication makes use of data products from the Spectro-Photometer for the History of the Universe, Epoch of Reionization and Ices Explorer (SPHEREx), which is a joint project of the Jet Propulsion Laboratory and the California Institute of Technology, and is funded by the National Aeronautics and Space Administration.* Datos vía NASA/IPAC IRSA.
+
+## Uso de IA y herramientas de trabajo
+
+Usé **Claude Code** (Anthropic) como asistente de programación: para escribir y revisar código de las piezas de entrega, ejecutar pruebas, redactar el análisis de coherencia y publicar los releases. También usé **EGM** (elephant-goldfish-model) como método de revisión de deriva entre documentación y código. Todo lo que aparece en este repositorio lo revisé y lo publiqué yo; la IA no reemplaza la revisión humana. El equipo del proyecto declara el uso de IA en su entrega al hackatón.
+
 ## Mi participación
 
 Proyecto de equipo (6 personas) del hackatón NASA Space Apps 2026. El repositorio del código es del equipo
