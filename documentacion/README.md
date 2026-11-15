@@ -25,6 +25,12 @@ Leí la documentación del repositorio oficial (`docs/`, `README.md`, `AGENTS.md
 | 📖 11 | [Glosario](11_GLOSARIO.md) | Todas las personas | ¿Qué significa «época», «LVF», «HiPS»…? |
 | ✅ 12 | [Instalar y verificar](12_VERIFICAR_DESCARGAS.md) | Usuarios | ¿Cómo instalo y compruebo una descarga? |
 | 🕰️ 13 | [Cronología](13_CRONOLOGIA.md) | Todas las personas | ¿Qué trajo cada versión? |
+| ❓ 14 | [Preguntas y respuestas](14_PREGUNTAS_FRECUENTES.md) | Todas las personas | Las dudas más probables, con respuesta corta y enlace |
+| 💼 15 | [Alcance y potencial comercial](15_ALCANCE_COMERCIAL.md) | Coordinación y evaluación | ¿A quién sirve, qué cuesta y qué falta para un uso serio? |
+| ⚖️ 16 | [Comparativa y estado del arte](16_COMPARATIVA_Y_ESTADO_DEL_ARTE.md) | Evaluación y ciencia | ¿Qué existe ya y dónde está el hueco? |
+| 🛣️ 17 | [Hoja de ruta](17_HOJA_DE_RUTA.md) | Coordinación | ¿Qué conviene hacer, y en qué orden? |
+| 🔐 18 | [Seguridad y privacidad](18_SEGURIDAD_Y_PRIVACIDAD.md) | Desarrollo y usuarios | ¿Qué datos maneja y qué riesgos hay? |
+| 🎤 19 | [El pitch y la entrega](19_PITCH_Y_ENTREGA.md) | Evaluación y equipos futuros | ¿Cómo se presentó y se entregó? |
 
 ## 🧭 Rutas de lectura
 
@@ -33,6 +39,9 @@ Leí la documentación del repositorio oficial (`docs/`, `README.md`, `AGENTS.md
 - **Voy a tocar el código:** [03](03_API.md), [05](05_BACKEND.md), [06](06_FRONTEND.md) y [09](09_RIESGOS_Y_AUDITORIA.md).
 - **Voy a publicar un release:** [07](07_APPS_NATIVAS_Y_RELEASES.md) y [13](13_CRONOLOGIA.md).
 - **Me interesa la ciencia:** [04](04_DATOS_SPHEREX.md) y [08](08_HALLAZGOS_CIENTIFICOS.md).
+- **Evalúo el proyecto (jurado, institución, posible uso comercial):** [01](01_PROYECTO.md), [14](14_PREGUNTAS_FRECUENTES.md), [15](15_ALCANCE_COMERCIAL.md), [16](16_COMPARATIVA_Y_ESTADO_DEL_ARTE.md) y [19](19_PITCH_Y_ENTREGA.md).
+- **Me preocupa la seguridad o la privacidad:** [18](18_SEGURIDAD_Y_PRIVACIDAD.md) y [SECURITY.md](../SECURITY.md).
+- **Quiero saber qué sigue:** [17](17_HOJA_DE_RUTA.md) y [09](09_RIESGOS_Y_AUDITORIA.md).
 
 ## 🔗 Enlaces útiles
 
