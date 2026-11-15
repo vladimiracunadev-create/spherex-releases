@@ -13,17 +13,25 @@ a{color:var(--ac)}code{font-size:.85em;word-break:break-all}
 .warn{color:var(--warn)}
 </style></head><body><main>
 <h1>AstroTRACK · SPHEREx</h1>
-<p class="mut">Descargas oficiales de la versión <b>v0.4.1</b> · NASA Space Apps 2026 · publicado el 2026-11-15</p>
-<ul>
-<li><b>Windows</b> · <a href="https://github.com/vladimiracunadev-create/spherex-releases/releases/download/v0.4.1/AstroTRACK-windows-AstroTRACK_0.2.0_x64-setup.exe">instalador .exe</a> · <a href="https://github.com/vladimiracunadev-create/spherex-releases/releases/download/v0.4.1/AstroTRACK-windows-AstroTRACK_0.2.0_x64_en-US.msi">.msi</a></li>
-<li><b>macOS</b> · <a href="https://github.com/vladimiracunadev-create/spherex-releases/releases/download/v0.4.1/AstroTRACK-macos-AstroTRACK_0.2.0_universal.dmg">.dmg (universal)</a></li>
-<li><b>Linux</b> · <a href="https://github.com/vladimiracunadev-create/spherex-releases/releases/download/v0.4.1/AstroTRACK-linux-AstroTRACK_0.2.0_amd64.AppImage">.AppImage</a> · <a href="https://github.com/vladimiracunadev-create/spherex-releases/releases/download/v0.4.1/AstroTRACK-linux-AstroTRACK_0.2.0_amd64.deb">.deb</a></li>
-<li><b>Android</b> · <a href="https://github.com/vladimiracunadev-create/spherex-releases/releases/download/v0.4.1/AstroTRACK-android-v0.4.1.apk">.apk</a> (firmado con clave de depuración)</li>
-<li><b>Web (PWA)</b> · <a href="https://spherex-planet-x-tau.vercel.app">abrir la aplicación</a> · <a href="https://github.com/vladimiracunadev-create/spherex-releases/releases/download/v0.4.1/spherex-pwa-v0.4.1.zip">zip estático</a></li>
-<li><b>iPhone / iPad</b> · no hay app nativa. Abrir la aplicación web en Safari → Compartir → «Añadir a pantalla de inicio».</li>
-<li><b>Verificación</b> · <a href="https://github.com/vladimiracunadev-create/spherex-releases/releases/download/v0.4.1/SHA256SUMS.txt">SHA256SUMS.txt</a></li>
-</ul>
-<p class="warn"><b>Antes de instalar:</b> los instaladores no están firmados (Windows y macOS avisan la primera vez; en Android hay que permitir apps desconocidas) y no se probaron en equipos reales. Los de escritorio dicen 0.2.0 en el nombre del archivo; es solo etiquetado.</p>
-<h2>Versiones anteriores</h2><ul><li><a href="https://github.com/vladimiracunadev-create/spherex-releases/releases/tag/v0.4.0">v0.4.0</a> · <a href="https://github.com/vladimiracunadev-create/spherex-releases/releases/download/v0.4.0/SHA256SUMS-v0.4.0.txt">sumas</a></li><li><a href="https://github.com/vladimiracunadev-create/spherex-releases/releases/tag/v0.3.1">v0.3.1</a> · <a href="https://github.com/vladimiracunadev-create/spherex-releases/releases/download/v0.3.1/SHA256SUMS-v0.3.1.txt">sumas</a></li><li><a href="https://github.com/vladimiracunadev-create/spherex-releases/releases/tag/v0.3.0">v0.3.0</a> · <a href="https://github.com/vladimiracunadev-create/spherex-releases/releases/download/v0.3.0/SHA256SUMS-v0.3.0.txt">sumas</a></li></ul>
+<p class="mut">Descargas oficiales · NASA Space Apps 2026</p>
+<p class="mut" id="ver" role="status">Buscando la última versión…</p>
+<ul id="lista"><li><a href="https://github.com/vladimiracunadev-create/spherex-releases/releases/latest">Ver la última versión en GitHub</a></li></ul>
+<ul><li><b>Web (PWA)</b> · <a href="https://spherex-planet-x-tau.vercel.app">abrir la aplicación</a></li>
+<li><b>iPhone / iPad</b> · no hay app nativa. Abrir la aplicación web en Safari → Compartir → «Añadir a pantalla de inicio».</li></ul>
+<script>
+(async()=>{
+ const R="vladimiracunadev-create/spherex-releases",ver=document.getElementById("ver"),ul=document.getElementById("lista");
+ try{
+  const r=await fetch("https://api.github.com/repos/"+R+"/releases/latest");if(!r.ok)throw 0;
+  const j=await r.json(),A=j.assets,f=re=>A.find(a=>re.test(a.name)),mb=b=>(b/1048576).toFixed(b>=1e7?0:1)+" MB";
+  const L=(a,t)=>a?'<a href="'+a.browser_download_url+'">'+t+" ("+mb(a.size)+")</a>":"";
+  const filas=[["Windows",[[/setup\.exe$/,"instalador .exe"],[/\.msi$/,".msi"]]],["macOS",[[/\.dmg$/,".dmg (universal)"]]],["Linux",[[/\.AppImage$/,".AppImage"],[/\.deb$/,".deb"]]],["Android",[[/\.apk$/,".apk"]]],["Web (zip estático)",[[/pwa.*\.zip$/,".zip"]]],["Verificación",[[/^SHA256SUMS/,"SHA256SUMS.txt"]]]];
+  ul.innerHTML=filas.map(([n,xs])=>"<li><b>"+n+"</b> · "+xs.map(([re,t])=>L(f(re),t)).filter(Boolean).join(" · ")+"</li>").join("");
+  ver.innerHTML="Versión más reciente: <b>"+j.tag_name+"</b> · publicada el "+j.published_at.slice(0,10);
+ }catch(e){ver.textContent="No se pudo consultar la última versión ahora; usa el enlace de abajo."}
+})();
+</script>
+<p class="warn"><b>Antes de instalar:</b> los instaladores no están firmados (Windows y macOS avisan la primera vez; en Android hay que permitir apps desconocidas) y no se probaron en equipos reales. Las versiones hasta la v0.4.1 dicen 0.2.0 en los instaladores de escritorio y 1.0 en el APK; desde la v0.4.2 coinciden con el número del release.</p>
+<h2>Versiones anteriores</h2><ul><li><a href="https://github.com/vladimiracunadev-create/spherex-releases/releases/tag/v0.4.1">v0.4.1</a></li><li><a href="https://github.com/vladimiracunadev-create/spherex-releases/releases/tag/v0.4.0">v0.4.0</a></li><li><a href="https://github.com/vladimiracunadev-create/spherex-releases/releases/tag/v0.3.1">v0.3.1</a></li><li><a href="https://github.com/vladimiracunadev-create/spherex-releases/releases/tag/v0.3.0">v0.3.0</a></li><li><a href="https://github.com/vladimiracunadev-create/spherex-releases/releases/tag/v0.2.0">v0.2.0</a></li><li><a href="https://github.com/vladimiracunadev-create/spherex-releases/releases/tag/v0.1.0">v0.1.0</a></li></ul>
 <p class="mut"><a href="https://github.com/vladimiracunadev-create/spherex-releases/releases">Todos los releases</a></p>
 </main></body></html>
