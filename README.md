@@ -1,3 +1,5 @@
+<p align="center"><img src="documentacion/assets/banner.svg" alt="AstroTrack · SPHEREx" width="100%"></p>
+
 # spherex-releases
 
 Copia pública de los instaladores de **AstroTrack · SPHEREx** ([NASA Space Apps Challenge](https://www.spaceappschallenge.org/) 2026, desafío *Planet X and SPHEREx*).
@@ -11,11 +13,11 @@ No contiene código fuente: solo la página de enlaces y los releases.
 
 Los instaladores no están firmados y no se probaron en equipos reales. Publicado el 2026-11-15.
 
-## Documentación
+## 📚 Documentación
 
 Estudio en profundidad del proyecto en [`documentacion/`](documentacion/README.md): [el proyecto](documentacion/01_PROYECTO.md), [arquitectura](documentacion/02_ARQUITECTURA.md), [API](documentacion/03_API.md), [datos de SPHEREx](documentacion/04_DATOS_SPHEREX.md), [backend](documentacion/05_BACKEND.md), [visor](documentacion/06_FRONTEND.md), [apps y releases](documentacion/07_APPS_NATIVAS_Y_RELEASES.md), [hallazgos científicos](documentacion/08_HALLAZGOS_CIENTIFICOS.md), [riesgos y auditoría](documentacion/09_RIESGOS_Y_AUDITORIA.md), [herramientas y uso de IA](documentacion/10_HERRAMIENTAS_Y_IA.md), [glosario](documentacion/11_GLOSARIO.md), [instalar y verificar descargas](documentacion/12_VERIFICAR_DESCARGAS.md) y [cronología](documentacion/13_CRONOLOGIA.md). Además, el [CHANGELOG](CHANGELOG.md).
 
-## Tecnologías y fuentes de datos
+## 🧰 Tecnologías y fuentes de datos
 
 **Lenguajes:** Python 3.11 (backend y análisis), TypeScript y React 18 (visor web), Rust (envoltorio de escritorio con Tauri 2), JavaScript/Node (scripts de empaquetado), Bash y YAML (CI/CD), HTML/CSS.
 
@@ -32,11 +34,11 @@ Estudio en profundidad del proyecto en [`documentacion/`](documentacion/README.m
 - [SIMBAD](https://simbad.cds.unistra.fr/) (CDS, con espejo de Harvard de respaldo) y Gaia para nombres y catálogos de objetos.
 - Misión [SPHEREx](https://spherex.caltech.edu/) de la NASA (JPL y Caltech): *This publication makes use of data products from the Spectro-Photometer for the History of the Universe, Epoch of Reionization and Ices Explorer (SPHEREx), which is a joint project of the Jet Propulsion Laboratory and the California Institute of Technology, and is funded by the National Aeronautics and Space Administration.* Datos vía NASA/IPAC IRSA.
 
-## Uso de IA y herramientas de trabajo
+## 🤖 Uso de IA y herramientas de trabajo
 
 Usé **Claude Code** (Anthropic) como asistente de programación: para escribir y revisar código de las piezas de entrega, ejecutar pruebas, redactar el análisis de coherencia y publicar los releases. También usé **EGM** (elephant-goldfish-model) como método de revisión de deriva entre documentación y código. Todo lo que aparece en este repositorio lo revisé y lo publiqué yo; la IA no reemplaza la revisión humana. El equipo del proyecto declara el uso de IA en su entrega al hackatón.
 
-## Mi participación
+## 🙋 Mi participación
 
 Proyecto de equipo (6 personas) del hackatón NASA Space Apps 2026. El repositorio del código es del equipo
 ([mauriciovalenzuela742/SPHEREX](https://github.com/mauriciovalenzuela742/SPHEREX)); este repositorio solo reúne las descargas. Mi parte:

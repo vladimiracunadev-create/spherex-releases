@@ -1,4 +1,4 @@
-# 11 · Glosario
+# 📖 11 · Glosario
 
 Para leer el resto de la documentación sin conocimientos de astronomía. Basado en el glosario de `AGENTS.md` del repositorio oficial.
 

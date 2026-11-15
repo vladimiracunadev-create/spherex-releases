@@ -1,8 +1,8 @@
-# 06 · El visor (frontend)
+# 🖥️ 06 · El visor (frontend)
 
 `scaffold/frontend/` del repositorio oficial: **React 18 + Vite 6 + TypeScript 5**, con **Aladin Lite 3.8.2** para el cielo. Unas 12.500 líneas de TypeScript y 960 de CSS (medido en `main`, `5b599b9`).
 
-## Cómo navega una persona
+## 🧭 Cómo navega una persona
 
 ```
 Portada ──► Vista simple ──► Modo ciencia (el Visor completo)
@@ -14,7 +14,7 @@ Portada ──► Vista simple ──► Modo ciencia (el Visor completo)
 
 El menú ☰ del Modo ciencia ofrece Inicio, Visor, Modo Misión, Ver tutorial, Descargas y Repositorio. Hay selector de idioma español/inglés.
 
-## Mapa de carpetas (`src/`)
+## 🗺️ Mapa de carpetas (`src/`)
 
 | Carpeta | Líneas | Qué hace |
 |---|---|---|
@@ -33,7 +33,7 @@ El menú ☰ del Modo ciencia ofrece Inicio, Visor, Modo Misión, Ver tutorial, 
 | `huella/` | 126 | Resultados de la huella espectral precalculados |
 | `state/` | 121 | Estado ↔ URL, idioma |
 
-## Piezas que vale la pena entender
+## 💎 Piezas que vale la pena entender
 
 - **Estado en la URL** (`state/url.ts`): `ra`, `dec`, `size` (máximo 0,5°), `band` (D1–D6), `mision`, `tutorial`, `ciencia`, `vista`. Cada nivel del Modo Misión y cada vista es un enlace compartible. Un enlace viejo con `size=1` se recorta al máximo.
 - **Datos del explorador** (`explorador/useDatosSpherex.ts`): carga la rejilla de visitas por `/api/grid` y los fotogramas como float32 crudos, que `render.ts` pinta en el navegador.
@@ -42,15 +42,15 @@ El menú ☰ del Modo ciencia ofrece Inicio, Visor, Modo Misión, Ver tutorial, 
 - **Capas de catálogos** (`sky/capas/`): consultan SIMBAD (CDS primero, espejo de Harvard de respaldo), Gaia y CatWISE directo desde el navegador, con estado visible y botón «Reintentar» si no responden.
 - **Accesibilidad:** respeta `prefers-reduced-motion` (el parpadeo automático se apaga y se ofrece «Alternar época»), textos de ayuda, y botones de al menos 44 px en móvil.
 
-## PWA
+## 📲 PWA
 
 El visor es una aplicación web instalable: `manifest.webmanifest`, íconos (192, 512 y *maskable*) y un `sw.js` con caché del *shell* (`spherex-shell-v1`). Las llamadas a `/api`, `/proto-api` y `/health` **nunca se cachean**: los datos siempre vienen frescos. En iPhone/iPad es la única vía de instalación (ver [07](07_APPS_NATIVAS_Y_RELEASES.md)).
 
-## Datos precalculados (`public/precalc/`)
+## ⚡ Datos precalculados (`public/precalc/`)
 
 Archivos estáticos que el visor lee primero para que los cinco objetos de prueba carguen al instante: `espectro/`, `explorador/` (WISE 0855 y eps Ind B), `huella/`, `mision/` y `simple/`.
 
-## Cómo correrlo
+## ▶️ Cómo correrlo
 
 ```bash
 cd scaffold/frontend

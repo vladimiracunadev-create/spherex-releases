@@ -1,41 +1,35 @@
-# 07 · Apps instalables y cómo se publican los releases
+# 📦 07 · Apps instalables y cómo se publican los releases
 
-## Qué es cada app
+## 📱 Qué es cada app
+
+<p align="center"><img src="assets/plataformas.svg" alt="Una app, seis maneras de tenerla: Windows, macOS, Linux, Android, iPhone y la web" width="100%"></p>
 
 Son **envoltorios mínimos del visor web**: abren el sitio publicado (<https://spherex-planet-x-tau.vercel.app>) en una ventana nativa. Por eso usan los mismos `/api` y `/proto-api` por *rewrites* (sin CORS), siempre muestran la versión desplegada y **necesitan internet** (la aplicación lo necesita igual para traer los datos).
 
 | Plataforma | Herramienta | Carpeta (repo oficial) | Archivo del release |
 |---|---|---|---|
-| Windows | Tauri 2 | `native/tauri/` | `AstroTrack-windows-…-setup.exe` y `.msi` |
-| macOS (Intel y Apple Silicon) | Tauri 2 | `native/tauri/` | `AstroTrack-macos-…universal.dmg` |
-| Linux | Tauri 2 | `native/tauri/` | `.AppImage` y `.deb` |
-| Android | Capacitor 6 | `native/android/` | `AstroTrack-android-vX.Y.Z.apk` |
-| Web | PWA | `scaffold/frontend/` | `spherex-pwa-vX.Y.Z.zip` |
-| iPhone / iPad | PWA | — | Safari → Compartir → «Añadir a pantalla de inicio» |
+| 🪟 Windows | Tauri 2 | `native/tauri/` | `AstroTrack-windows-…-setup.exe` y `.msi` |
+| 🍎 macOS (Intel y Apple Silicon) | Tauri 2 | `native/tauri/` | `AstroTrack-macos-…universal.dmg` |
+| 🐧 Linux | Tauri 2 | `native/tauri/` | `.AppImage` y `.deb` |
+| 🤖 Android | Capacitor 6 | `native/android/` | `AstroTrack-android-vX.Y.Z.apk` |
+| 🌐 Web | PWA | `scaffold/frontend/` | `spherex-pwa-vX.Y.Z.zip` |
+| 📱 iPhone / iPad | PWA | — | Safari → Compartir → «Añadir a pantalla de inicio» |
 
 Si la conexión falla, cada envoltorio muestra una página mínima sin conexión («AstroTrack necesita conexión a internet para mostrar el cielo»).
 
-### Por qué no hay app nativa para iPhone
+### 🍎 Por qué no hay app nativa para iPhone
 
 Apple solo deja instalar apps nativas firmadas con una cuenta **Apple Developer de pago (99 USD/año)**, distribuidas por TestFlight o App Store. El equipo no tiene esa cuenta, así que no hay `.ipa`. Instalar archivos sueltos o con un Apple ID gratuito no es viable (la app caduca a los 7 días y exige un Mac con Xcode). La alternativa gratuita es la PWA. Si algún día hay cuenta, se podría añadir un proyecto iOS con Capacitor; la App Store podría rechazarlo por ser una web envuelta (regla 4.2).
 
-## Cómo se construye un release
+## 🏭 Cómo se construye un release
 
 Todo ocurre en GitHub Actions (`.github/workflows/release.yml`) **al empujar una etiqueta `vX.Y.Z`**. Para probar sin publicar existe `workflow_dispatch`, que deja los archivos como artefactos del run.
 
-```mermaid
-flowchart TD
-  T[Etiqueta vX.Y.Z] --> P[Job pwa: npm ci + build + zip]
-  P --> R[Crea el release de GitHub]
-  P --> E[Jobs escritorio: Windows, macOS, Linux con Tauri]
-  P --> A[Job android: Capacitor + Gradle assembleDebug]
-  E --> R
-  A --> R
-```
+<p align="center"><img src="assets/pipeline_release.svg" alt="Una etiqueta dispara la PWA, el escritorio y Android, que se adjuntan al mismo release" width="100%"></p>
 
 La construcción completa tarda unos 11 minutos. Cada job adjunta sus archivos al mismo release.
 
-## Una sola versión, desde la etiqueta
+## 🔢 Una sola versión, desde la etiqueta
 
 Antes del release v0.4.2 convivían cinco números: la etiqueta decía 0.4.1, los instaladores de escritorio 0.2.0, el APK 1.0 por dentro, y el frontend y el backend 0.0.1. Desde v0.4.2, **la etiqueta es la única fuente**:
 
@@ -43,11 +37,14 @@ Antes del release v0.4.2 convivían cinco números: la etiqueta decía 0.4.1, lo
 - `native/estampar_version.mjs X.Y.Z android` fija `versionName` y `versionCode` del proyecto Android (`versionCode = mayor·10000 + menor·100 + parche`; 0.4.2 → 402).
 - El script falla en voz alta si no encuentra el campo que debía reemplazar.
 
+<p align="center"><img src="assets/version_unica.svg" alt="De cinco números de versión distintos a uno solo" width="100%"></p>
+
 Comprobado el 2026-11-15 abriendo los archivos de v0.4.2: el APK trae `versionName` 0.4.2 y `versionCode` 402; el `.exe` y el `.msi` 0.4.2 con producto «AstroTrack»; el `.deb` 0.4.2. El `.dmg` y el `.AppImage` solo se comprobaron por el nombre del archivo.
 
-**Los releases v0.1.0 a v0.4.1 siguen con 0.2.0 por dentro en escritorio y 1.0 en el APK.** Cambiarlos exigiría reconstruirlos y mover sus etiquetas.
+> [!NOTE]
+> **Los releases v0.1.0 a v0.4.1 siguen con 0.2.0 por dentro en escritorio y 1.0 en el APK.** Cambiarlos exigiría reconstruirlos y mover sus etiquetas.
 
-## Sin firmar
+## ⚠️ Sin firmar
 
 | Plataforma | Qué pasa la primera vez |
 |---|---|
@@ -56,13 +53,16 @@ Comprobado el 2026-11-15 abriendo los archivos de v0.4.2: el APK trae `versionNa
 | Android | APK firmado con la clave de depuración; hay que permitir «instalar apps desconocidas» |
 | Linux | AppImage: darle permiso de ejecución; `.deb`: instalar con el gestor de paquetes |
 
+> [!WARNING]
+> Los instaladores no están firmados y no se han probado en equipos reales.
+
 Para firmar de verdad harían falta un certificado de código (Windows), Developer ID con notarización (macOS) y un keystore propio (Android), guardados como secretos del repositorio. No se incluyen. **Los instaladores no se han probado en equipos reales**; se construyen y adjuntan en CI.
 
-## Este repositorio
+## 🗃️ Este repositorio
 
 `vladimiracunadev-create/spherex-releases` guarda una **copia pública** de los siete releases (v0.1.0 a v0.4.2), con las sumas SHA-256 de cada uno y una [página](https://vladimiracunadev-create.github.io/spherex-releases/) que toma el último release automáticamente. Las etiquetas apuntan a este repositorio, que no contiene código fuente. Para comprobar una descarga, ver [12_VERIFICAR_DESCARGAS](12_VERIFICAR_DESCARGAS.md). La historia de versiones está en [13_CRONOLOGIA](13_CRONOLOGIA.md).
 
-## Cómo publicar un release nuevo (resumen)
+## 🚀 Cómo publicar un release nuevo (resumen)
 
 1. Mezclar los cambios en `main` del repositorio oficial.
 2. Etiquetar: `git tag -a vX.Y.Z <commit> -m "AstroTrack vX.Y.Z"` y `git push origin vX.Y.Z`.

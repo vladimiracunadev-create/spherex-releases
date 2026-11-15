@@ -1,8 +1,8 @@
-# 05 · El backend
+# ⚙️ 05 · El backend
 
 `scaffold/backend/` del repositorio oficial: **Python 3.11 + FastAPI**, unas 1.830 líneas de aplicación y 310 de pruebas (medido en `main`, `5b599b9`).
 
-## Mapa de módulos
+## 🗺️ Mapa de módulos
 
 ```
 scaffold/backend/app/
@@ -30,7 +30,7 @@ scaffold/backend/app/
 
 Los tres módulos más grandes son `frames/servicio.py` (331 líneas), `frames/rangos.py` (272) y `frames/procesar.py` (266).
 
-## Cómo se arma un fotograma
+## 🧩 Cómo se arma un fotograma
 
 1. **Qué hay:** `sia2.buscar_epocas` pregunta a IRSA qué archivos cubren la posición, en `spherex_dr1` y `spherex_qr3`.
 2. **Qué longitud de onda:** `cabeceras` (o `rangos.leer_wcs_wave`) lee la cabecera y la tabla `WCS-WAVE` sin bajar el archivo.
@@ -40,7 +40,7 @@ Los tres módulos más grandes son `frames/servicio.py` (331 líneas), `frames/r
 6. **Pintar:** `render` aplica estiramiento `asinh` o lineal con **escala común a toda la banda** (para que el brillo no «salte» entre fechas) y devuelve el PNG como *data URI*.
 7. **Respuesta parcial:** `servicio.fotogramas` procesa primero la primera y la última visita (la base temporal es lo que muestra el movimiento). Si se acaba `budget_s`, devuelve lo listo y en `pending` los `epoch_id` que faltan.
 
-## Pruebas
+## ✅ Pruebas
 
 46 pruebas con `pytest`, todas **sin red** (corrieron el 2026-11-15, Python 3.12.9 con las versiones fijadas de `requirements.txt`):
 
@@ -53,13 +53,14 @@ Los tres módulos más grandes son `frames/servicio.py` (331 líneas), `frames/r
 
 `ruff check .` da 17 avisos, todos de línea larga (E501); ninguno funcional. El CI corre `pytest`, pero deja `ruff` en `|| true` (ver [09](09_RIESGOS_Y_AUDITORIA.md), [#80](https://github.com/mauriciovalenzuela742/SPHEREX/issues/80)).
 
-**Lo que las pruebas no cubren:** que existan las rutas que usa el visor (`/api/grid`, `/api/frame`), que los parámetros documentados se acepten, ni `_banda()` con nombres de detector reales.
+> [!WARNING]
+> **Lo que las pruebas no cubren:** que existan las rutas que usa el visor (`/api/grid`, `/api/frame`), que los parámetros documentados se acepten, ni `_banda()` con nombres de detector reales.
 
-## Dependencias
+## 📦 Dependencias
 
 Pinneadas en `requirements.txt`: `fastapi==0.115.6`, `uvicorn[standard]==0.34.0`, `httpx==0.28.1`, `pytest==8.3.4`, `ruff==0.8.6`. Las astronómicas están aparte (`requirements-astro.txt`, sin versión): `numpy`, `astropy`, `pyvo`, `astroquery`, `pillow`, `matplotlib`, `PyYAML`, `scipy`.
 
-## Cómo correrlo
+## ▶️ Cómo correrlo
 
 ```bash
 cd scaffold/backend

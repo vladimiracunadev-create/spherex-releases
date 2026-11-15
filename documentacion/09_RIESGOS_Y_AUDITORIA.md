@@ -1,8 +1,8 @@
-# 09 · Riesgos y auditoría
+# 🛡️ 09 · Riesgos y auditoría
 
 Dos fuentes: el registro de riesgos del equipo (`docs/07_RIESGOS.md` del repositorio oficial) y la **auditoría de coherencia** entre documentación y código que hice el 2026-11-15 con el método de deriva de EGM ([10](10_HERRAMIENTAS_Y_IA.md)).
 
-## Riesgos que el equipo registró
+## 📋 Riesgos que el equipo registró
 
 Los títulos son los del registro del equipo (13 riesgos). La columna de la derecha es **mi resumen de cómo se aborda en el proyecto**, armado con el resto de la documentación; no copia el texto original, que puede decir otra cosa.
 
@@ -22,9 +22,11 @@ Los títulos son los del registro del equipo (13 riesgos). La columna de la dere
 | R12 | Cae el CDS de Estrasburgo (SIMBAD, VizieR) | Espejo de Harvard y estado visible con «Reintentar» |
 | R13 | Una estrella saturada engaña la resta | El visor debe avisar cuando el objeto satura |
 
-## Auditoría de coherencia (2026-11-15)
+## 🔍 Auditoría de coherencia (2026-11-15)
 
 **Método:** lectura de `AGENTS.md`, `docs/03_ARQUITECTURA.md` y `deploy/` contra `main.py`, `url.ts`, el CI y los manifiestos. **Evidencia: inspección estática**; los hallazgos no se reprodujeron contra la API viva. Complementos ejecutados: `pytest` (46 pasan), `ruff` (17 avisos E501) y `tsc --noEmit` (sin errores).
+
+<p align="center"><img src="assets/auditoria.svg" alt="Diez hallazgos: una gravedad alta, seis medias y tres bajas" width="100%"></p>
 
 **Veredicto:** corregir antes de ampliar pruebas, por el contrato y no por un fallo en pantalla. Nada de esto impide la demo; sí hace que el contrato de la API no sea fiable.
 
@@ -43,13 +45,13 @@ Los títulos son los del registro del equipo (13 riesgos). La columna de la dere
 
 El informe completo está en el [PR #71](https://github.com/mauriciovalenzuela742/SPHEREX/pull/71) del repositorio oficial (`ISSUES.md` y `docs/REPORTE_PRELIMINAR_EGM_2026-11-15.md`).
 
-## Estado conocido hoy
+## 📌 Estado conocido hoy
 
 - **Backend en producción:** `https://spherex-api.vercel.app/api/health` devolvía `0.0.1` el 2026-11-15, mientras el código está en 0.4.2: el despliegue manual no se había repetido ([#77](https://github.com/mauriciovalenzuela742/SPHEREX/issues/77)).
 - **Instaladores:** sin firmar y sin probar en equipos reales.
 - **Frontend:** sin pruebas automatizadas; el CI solo compila.
 - **Caché en Vercel:** las funciones no tienen disco persistente, así que la caché en disco no sirve allí; para la demo se usa el precalculado.
 
-## Lo que sí está bien
+## ✅ Lo que sí está bien
 
 `tsc --noEmit` termina sin errores; Aladin Lite está fijada en 3.8.2 como decide `AGENTS.md`; el Dockerfile usa Python 3.11; `/api/spectrum` incluye `caveat` como exige el contrato; no hay FITS versionados; las 46 pruebas pasan sin red.

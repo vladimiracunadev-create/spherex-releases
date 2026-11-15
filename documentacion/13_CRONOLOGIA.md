@@ -1,6 +1,8 @@
-# 13 · Cronología de versiones
+# 🕰️ 13 · Cronología de versiones
 
 Los siete releases se publicaron en el repositorio oficial durante el hackatón, el **15 de noviembre de 2026** (horas en UTC; Santiago va 3 horas por detrás). Los de este repositorio son copias exactas hechas el mismo día. Cada versión es un corte de lo que el equipo había mezclado en `main`, no un hito planificado.
+
+<p align="center"><img src="assets/cronologia.svg" alt="Línea de tiempo de los siete releases y el cierre de entregas" width="100%"></p>
 
 | Versión | Publicado (UTC) | Qué trae |
 |---|---|---|
@@ -14,7 +16,7 @@ Los siete releases se publicaron en el repositorio oficial durante el hackatón,
 
 Los números `#NN` son pull requests del [repositorio oficial](https://github.com/mauriciovalenzuela742/SPHEREX/pulls?q=is%3Apr+is%3Amerged).
 
-## Qué cambió de v0.4.1 a v0.4.2 en los archivos
+## 🔄 Qué cambió de v0.4.1 a v0.4.2 en los archivos
 
 | | v0.4.1 y anteriores | v0.4.2 |
 |---|---|---|
@@ -23,7 +25,7 @@ Los números `#NN` son pull requests del [repositorio oficial](https://github.co
 | `versionName` del APK | 1.0 | 0.4.2 (`versionCode` 402) |
 | Versión del frontend y del backend | 0.0.1 | 0.4.2 |
 
-## Cómo se ve en la línea de tiempo del evento
+## ⏳ Cómo se ve en la línea de tiempo del evento
 
 El hackatón empezó el sábado 14-nov-2026 a las 10:00 (hora de Santiago) y las entregas cerraban el domingo 15-nov a las 11:00. Los siete releases salieron entre las 21:48 del sábado y las 10:44 del domingo, hora de Santiago.
 
